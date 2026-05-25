@@ -1,10 +1,203 @@
-index.html<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STREAMO</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
-  <p>Website successfully working 🚀</p>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="logo">STREAMO</h1>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Movies</a>
+      <a href="#">Series</a>
+      <a href="#">Kids</a>
+      <a href="#">Live TV</a>
+    </nav>
+
+    <div class="right">
+      <input type="text" placeholder="Search..." />
+      <button>Login</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="tag">Trending</span>
+      <h2>Watch Unlimited Movies & Shows</h2>
+      <p>Stream dramas, movies, cartoons and more in HD quality.</p>
+      <div class="buttons">
+        <button class="play">▶ Watch Now</button>
+        <button class="list">+ My List</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTIONS -->
+  <div class="container">
+
+    <h2>Trending Now</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500">
+        <p>Action Hero</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=500">
+        <p>Kids Cartoon</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=500">
+        <p>Drama Series</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?w=500">
+        <p>Comedy Show</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 STREAMO. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0,0,0,0.9);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  color: red;
+}
+
+nav a {
+  color: #ccc;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.right input {
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+}
+
+.right button {
+  margin-left: 10px;
+  padding: 8px 15px;
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 20px;
+}
+
+/* HERO */
+.hero {
+  height: 70vh;
+  background: url('https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=1600') center/cover;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.tag {
+  background: red;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.hero h2 {
+  font-size: 40px;
+}
+
+.buttons button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.play {
+  background: white;
+  color: black;
+}
+
+.list {
+  background: gray;
+  color: white;
+}
+
+/* GRID */
+.container {
+  padding: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #222;
+  color: gray;
+}
+console.log("STREAMO website loaded successfully!");
