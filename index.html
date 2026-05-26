@@ -1,34 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Streamo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STREAMO</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body style="background:black;color:white;text-align:center;">
+<body>
 
-<h1>🎬 Streamo</h1>
-<p>Firebase Connected Successfully 🚀</p>
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="logo">STREAMO</h1>
 
-<script type="module">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Movies</a>
+      <a href="#">Series</a>
+      <a href="#">Kids</a>
+      <a href="#">Live TV</a>
+    </nav>
 
-import { initializeApp }
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    <div class="right">
+      <input type="text" placeholder="Search..." />
+      <button>Login</button>
+    </div>
+  </header>
 
-const firebaseConfig = {
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="tag">Trending</span>
+      <h2>Watch Unlimited Movies & Shows</h2>
+      <p>Stream dramas, movies, cartoons and more in HD quality.</p>
+      <div class="buttons">
+        <button class="play">▶ Watch Now</button>
+        <button class="list">+ My List</button>
+      </div>
+    </div>
+  </section>
 
-  apiKey: "YOUR_KEY",
-  authDomain: "YOUR_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_BUCKET",
-  messagingSenderId: "YOUR_ID",
-  appId: "YOUR_APP_ID"
+  <!-- SECTIONS -->
+  <div class="container">
 
-};
+    <h2>Trending Now</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500">
+        <p>Action Hero</p>
+      </div>
 
-const app = initializeApp(firebaseConfig);
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=500">
+        <p>Kids Cartoon</p>
+      </div>
 
-console.log("Firebase Connected");
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=500">
+        <p>Drama Series</p>
+      </div>
 
-</script>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?w=500">
+        <p>Comedy Show</p>
+      </div>
+    </div>
 
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 STREAMO. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
